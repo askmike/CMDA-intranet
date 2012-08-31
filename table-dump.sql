@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Aug 31, 2012 at 10:23 PM
+-- Generation Time: Aug 31, 2012 at 11:04 PM
 -- Server version: 5.1.44
 -- PHP Version: 5.3.1
 
@@ -26,8 +26,10 @@ CREATE TABLE IF NOT EXISTS `intranet` (
   `title` varchar(300) NOT NULL,
   `content` text NOT NULL,
   `stream` varchar(150) NOT NULL,
+  `url` varchar(300) NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `timestamp` (`timestamp`),
+  UNIQUE KEY `url` (`url`),
   KEY `author` (`author`),
   KEY `title` (`title`),
   KEY `stream` (`stream`),
